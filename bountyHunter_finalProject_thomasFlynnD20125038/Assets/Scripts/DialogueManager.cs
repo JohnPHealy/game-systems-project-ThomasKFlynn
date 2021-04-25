@@ -1,9 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
+    public TMP_Text nameText;
+    public TMP_Text dialogueText;
+
+    public Animator animator;
+
     private Queue<string> sentences;
 
     // Start is called before the first frame update
@@ -14,7 +21,9 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue (Dialogue dialogue)
     {
-        Debug.Log("Starting conversation with " + dialogue.name);
+        animator.SetBool("IsOpen", true);
+
+        nameText.text = dialogue.name;
 
         sentences.Clear();
 
@@ -35,12 +44,23 @@ public class DialogueManager : MonoBehaviour
         }
 
         string sentence = sentences.Dequeue();
-        Debug.Log(sentence);
+        StopAllCoroutines();
+        StartCoroutine(TypeSentence(sentence));
+    }
+
+    IEnumerator TypeSentence (string sentence)
+    {
+        dialogueText.text = "";
+        foreach (char letter in sentence.ToCharArray())
+        {
+            dialogueText.text += letter;
+            yield return null;
+        }
     }
 
     void EndDialogue()
     {
-        Debug.Log("end of Conversation...");
+        animator.SetBool("IsOpen", false);
     }
 
 }
