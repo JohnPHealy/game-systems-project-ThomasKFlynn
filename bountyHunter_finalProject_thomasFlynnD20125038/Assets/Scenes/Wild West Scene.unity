@@ -34858,8 +34858,8 @@ GameObject:
   m_Component:
   - component: {fileID: 960517673}
   - component: {fileID: 960517672}
-  - component: {fileID: 960517671}
   - component: {fileID: 960517675}
+  - component: {fileID: 960517671}
   m_Layer: 0
   m_Name: First Person Player
   m_TagString: Untagged
