@@ -15,7 +15,7 @@ public class CluesFound : MonoBehaviour
 
         if (numberOfClues >= 3)
         {
-            SceneManager.LoadScene("Game Over");
+            SceneManager.LoadScene("Main Menu");
         }
     }
 

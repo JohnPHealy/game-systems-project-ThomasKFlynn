@@ -22,7 +22,6 @@ public class DialogueTrigger : MonoBehaviour
         if (NPC.gameObject.CompareTag("Player"))
         {
             triggered = true;
-            Cursor.lockState = CursorLockMode.None;
         }
         Debug.Log("Triggered");
     }
@@ -32,7 +31,6 @@ public class DialogueTrigger : MonoBehaviour
         if (NPC.gameObject.CompareTag("Player"))
         {
             triggered = false;
-            Cursor.lockState = CursorLockMode.Locked;
         }
         Debug.Log("Not Triggered");
     }
