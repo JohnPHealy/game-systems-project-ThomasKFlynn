@@ -5,7 +5,7 @@ using System;
 
 public class ClueItem : MonoBehaviour
 {
-    public interface clue
+    public interface cClueItem
     {
         string Name { get; }
         Sprite Image { get; }
@@ -15,12 +15,12 @@ public class ClueItem : MonoBehaviour
 
     public class ClueEventArgs : EventArgs
     {
-        public ClueEventArgs(clue item)
+        public ClueEventArgs(cClueItem item)
         {
             Item = item;
         }
 
-        public clue Item;
+        public cClueItem Item;
     }
 
 }

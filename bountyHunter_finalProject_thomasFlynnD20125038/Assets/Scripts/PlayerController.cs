@@ -46,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        ClueItem item = hit.collider.GetComponent<ClueItem>();
+        cClueItem item = hit.collider.GetComponent<ClueItem>();
         if (item != null)
         {
             clues.AddItem(item);

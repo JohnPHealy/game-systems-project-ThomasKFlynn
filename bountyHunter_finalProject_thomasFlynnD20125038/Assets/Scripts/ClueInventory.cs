@@ -7,11 +7,11 @@ public class ClueInventory : MonoBehaviour
 {
     private const int SLOTS = 3;
 
-    private List<clue> mItems = new List<clue>();
+    private List<ClueItem> mItems = new List<ClueItem>();
 
     public event EventHandler<ClueEventArgs> ItemAdded;
 
-    public void AddItem(ClueItem item)
+    public void AddItem(cClueItem item)
     {
         if(mItems.Count < SLOTS)
         {
