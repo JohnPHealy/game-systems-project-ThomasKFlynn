@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
 
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 

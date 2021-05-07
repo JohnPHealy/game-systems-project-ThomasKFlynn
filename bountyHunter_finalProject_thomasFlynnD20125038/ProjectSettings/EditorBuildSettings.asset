@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: cfd38cffb00b53345a7739e0dc6477d1
+  - enabled: 1
+    path: Assets/Scenes/Wild West Scene.unity
+    guid: 4af6c3cadbdac0146953e8e1d188c75a
   m_configObjects: {}
