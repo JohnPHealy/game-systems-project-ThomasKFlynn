@@ -13,7 +13,6 @@ public class DialogueManager : MonoBehaviour
 
     private Queue<string> sentences;
 
-    // Start is called before the first frame update
     void Start()
     {
         sentences = new Queue<string>();
@@ -32,8 +31,10 @@ public class DialogueManager : MonoBehaviour
             sentences.Enqueue(sentence);
         }
 
-        DisplayNextSentence();
+        
     }
+
+
 
     public void DisplayNextSentence()
     {
@@ -43,9 +44,10 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        string sentence = sentences.Dequeue();
-        StopAllCoroutines();
-        StartCoroutine(TypeSentence(sentence));
+            string sentence = sentences.Dequeue();
+            StopAllCoroutines();
+            StartCoroutine(TypeSentence(sentence));
+        
     }
 
     IEnumerator TypeSentence (string sentence)

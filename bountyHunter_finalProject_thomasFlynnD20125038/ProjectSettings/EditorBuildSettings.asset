@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Wild West Scene.unity
     guid: 4af6c3cadbdac0146953e8e1d188c75a
+  - enabled: 1
+    path: Assets/Scenes/Game Over.unity
+    guid: 4aaf44f071586cc4192584ba30decef9
   m_configObjects: {}
