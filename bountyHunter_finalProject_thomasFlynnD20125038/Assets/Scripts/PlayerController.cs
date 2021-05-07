@@ -17,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
 
     public Camera cam;
 
+    public ClueInventory clues;
+
     // Update is called once per frame
     void Update()
     {
@@ -40,5 +42,14 @@ public class PlayerMovement : MonoBehaviour
 
         controller.Move(velocity * Time.deltaTime);
 
+    }
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        ClueItem item = hit.collider.GetComponent<ClueItem>();
+        if (item != null)
+        {
+            clues.AddItem(item);
+        }
     }
 }
